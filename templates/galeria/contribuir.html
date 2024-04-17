@@ -1,0 +1,62 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+{% block content %}
+<div class="pagina-inicial">
+    {% include 'galeria/partials/_header.html' %}
+    <main class="principal">
+        {% include 'galeria/partials/_menu-lateral.html' %}
+        <section class="conteudo">
+            <fieldset class="payment">
+                <h1 class="payment-title">Pagamento</h1>
+                <form id="payment-form">
+                    <div class="input-group">
+                        <label class="payment-label" for="tipo_doacao">Tipo de Doação:</label>
+                        <select id="tipo_doacao" name="tipo_doacao" required>
+                            <option value="" disabled selected>Selecione o tipo de doação</option>
+                            <option value="doacao">Doar</option>
+                            <option value="apadrinhar">Apadrinhar</option>
+                            <option value="cesta_basica">Cesta Básica</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group" id="valor_doacao">
+                        <label class="payment-label" for="valor">Valor da Doação:</label>
+                        <input type="number" id="valor" name="valor" placeholder="Insira o valor desejado">
+                    </div>
+
+                    <div class="input-group">
+                        <label class="payment-label" for="metodo_pagamento">Método de Pagamento:</label>
+                        <select id="metodo_pagamento" name="metodo_pagamento" required>
+                            <option value="pix">Pix</option>
+                            <option value="cartao">Cartão de Crédito</option>
+                        </select>
+                    </div>
+
+                    <div id="detalhes_cartao" class="input-group">
+                        <label for="numero_cartao">Número do Cartão:</label>
+                        <div id="card-element"></div>
+                    </div>
+
+                    <div id="mensagem_apadrinhar">
+                        <p>Atenção! Ao escolher Apadrinhar, você passará por uma análise antes de continuar.</p>
+                    </div>
+
+                    <div class="input-group cesta_basica_options">
+                        <label class="payment-label" for="cesta_basica_opcao">Escolha uma Cesta Básica:</label>
+                        <select id="cesta_basica_opcao" name="cesta_basica_opcao" required>
+                            <option value="cesta_basica_1">Cesta Básica 1 - R$50,00</option>
+                            <option value="cesta_basica_2">Cesta Básica 2 - R$75,00</option>
+                            <option value="cesta_basica_3">Cesta Básica 3 - R$100,00</option>
+                        </select>
+                    </div>
+
+                    <button id="submit">Pagar</button>
+
+                </form>
+                </h1>
+            </fieldset>
+        </section>
+        </section>
+    </main>
+</div>
+{% endblock %}

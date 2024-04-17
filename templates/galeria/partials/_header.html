@@ -1,0 +1,14 @@
+{% load static %}
+<header class="cabecalho">
+    <div class="logo-wraper">
+        <img class="logo" src="{% static '/assets/logo/casaLeo.png' %}" alt="Logo Casa do Leo" />
+        <span class="title">Casa do Leo</span>
+    </div>
+    <a href="{% url 'contribuir' %}" class="doar">Contribuir</a>
+    <!-- <div class="cabecalho__busca">
+        <div class="busca__fundo">
+            <input class="busca__input" type="text" placeholder="O que você procura?">
+            <img class="busca__icone" src="{% static '/assets/ícones/1x/search.png' %}" alt="ícone de search">
+        </div>
+    </div> -->
+</header>

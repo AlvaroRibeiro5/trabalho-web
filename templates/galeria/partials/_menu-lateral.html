@@ -1,0 +1,9 @@
+{% load static %}
+<section class="menu-lateral">
+    <nav class="menu-lateral__navegacao">
+        <a href="{% url 'index' %}"><img class="img-menu" src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Inicio</a>
+        <a href="{% url 'casa_do_leo' %}"><img class="img-menu" src="{% static '/assets/ícones/1x/Cdl - inativo.png' %}"> A Casa do Leo</a>
+        <a href="{% url 'form' %}"><img class="img-menu" src="{% static '/assets/ícones/1x/Cadastro - inativo.png' %}"> Cadastre-se</a>
+        <a href="{% url 'contato' %}"><img class="img-menu" src="{% static '/assets/ícones/1x/Contato - inativo.png' %}"> Contato</a>
+    </nav>
+</section>
